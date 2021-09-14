@@ -1,0 +1,318 @@
+// reset CSS
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// install font and icon
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+// style Header section
+header {
+	height: 80px;
+	background-color: #f4f7f2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.logo-header {
+		height: 50px;
+		margin-left: 40px;
+		margin-right: 40px;
+		border-radius: 2px;
+		cursor: pointer;
+	}
+
+	.nav {
+		flex-grow: 1;
+		justify-content: center;
+		height: 36px;
+
+		li{
+			padding: 0 15px;
+			color: #2c2c2c;
+			font-weight: 600;
+			line-height: 36px;
+			cursor: pointer;
+			position: relative;
+
+			&::after {
+				// display: none;
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				border-bottom: 1px solid #46b04a;
+				transition: width .2s linear;
+			}
+
+			&:hover {
+				color: #46b04a;
+
+				&::after {
+					display: block;
+					width: calc(100% - 20px);
+				}
+			}
+		}
+	}
+
+	.feature-tools {
+		display: flex;
+		margin-right: 50px;
+
+		.tool-item {
+			cursor: pointer;
+			height: 36px;
+			width: 36px;
+			text-align: center;
+			margin: 0 10px;
+			position: relative;
+
+			span {
+				font-size: 28px;
+				font-weight: 500;
+				display: block;
+				line-height: 36px;
+			}
+
+			span:hover {
+				color: #46b04a;
+			}
+
+			.number-count {
+				position: absolute;
+				top: 1px;
+				right: -1px;
+				width: 18px;
+				height: 18px;
+				line-height: 18px;
+				font-size: 11px;
+				color: #fff;
+				background-color: #46b04a;
+				border-radius: 50%;
+			}
+		}
+
+		.search {
+
+			.overlay {
+				display: none;
+				position: fixed;
+		    background-color: rgba(0, 0, 0, 0.3);
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    left: 0;
+		    cursor: default;
+		    z-index: 1;
+		    animation: fideIn .2s linear;
+			}
+
+			@keyframes fideIn {
+				from {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+
+			.search-bar {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 150px;
+				background-color: #fff;
+		    cursor: default;
+		    transform: translateY(-100%);
+		    transition: transform .2s linear;
+				z-index: 2;
+
+				&__input {
+			    width: 70%;
+			    padding: 10px 30px;
+			    font-size: 16px;
+			    font-weight: 400;
+			    color: #707070;
+			    background: #fff;
+			    border: 1px solid #ced8d8;
+			    outline: none;
+				}
+
+				&__btn {
+			    padding: 4px 25px;
+			    border: 1px solid #ced8d8;
+			    border-left: none;
+			    cursor: pointer;
+			    color: #707070;
+
+			    &:hover {
+			    	background-color: #46b04a;
+			    	color: #fff;
+			    }
+				}
+
+				&__closed {					position: absolute;
+					right: 70px;
+					top: 20px;
+					font-size: 24px;
+					line-height: 24px;
+					border: 1px solid transparent;
+					border-radius: 50%;
+					cursor: pointer;
+
+					&:hover {
+						background-color: #ff3e42d4;
+				    color: #fff;
+				    box-shadow: 0 0 3px #ff3e42;
+					}
+				}
+
+				&.show {
+					transform: translateY(0);
+				}
+			}
+		}
+
+		.user {
+			
+		}
+	}
+}
+
+// Animation in Header
+
+// Start style Banner section
+.banner-section {
+	min-height: 460px;
+	background-color: #f4f7f2;
+
+	.banner-content {
+		padding: 50px;
+		
+		.banner-heading {
+			font-size: 100px;
+			color: #2c2c2ce3;
+			font-weight: 800;
+			position: relative;
+			letter-spacing: -4px;
+			text-transform: uppercase;
+			display: inline-block;
+			padding-bottom: 10px;
+    	padding-right: 100px;
+
+			span {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				color: #46b04a;
+				font-size: 100px;
+				font-weight: 400;
+				font-family: 'Dancing Script', cursive;
+				text-shadow: #fff 3px 0 0;
+				text-transform: none;
+				line-height: 120px
+			}
+		}
+
+		.banner-subheading {
+			font-size: 24px;
+			margin-bottom: 10px;
+			color: #707070;
+		}
+
+		.banner-desc {
+			font-size: 20px;
+			color:#707070;
+			margin-bottom: 40px;
+		}
+
+		.banner-btn {
+			padding: 14px 32px;
+			border: 1px solid #2c2c2c;
+			border-radius: 2px;
+			font-size: 18px;
+
+			&:hover {
+				border: 1px solid #46b04a;
+				color: #fff;
+				background-color: #46b04a;
+			}
+		}
+
+	}
+
+	.banner-image {
+		position: relative;
+
+		img {
+			max-width: 500px;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+// End style Banner section
+
+// Start style Categories section 
+.categories-section {
+	margin-top: 90px;
+
+	.category-item {
+		cursor: pointer;
+		transition: transform .3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			border-radius: 4px;
+			box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+		}
+
+		&-img {
+			max-width: 115px;
+			margin: 20px auto 0;
+	    text-align: center;
+
+			img {
+				max-height: 115px;
+			}
+		}
+
+		&-content {
+			text-align: center;
+	    padding: 23px 15px;	
+
+			h2 {
+				font-size: 18px;
+				line-height: 30px;
+    		color: #2c2c2c;
+    		margin-bottom: 12px;
+			}
+
+			h6 {
+				font-size: 16px;
+				line-height: 24px;
+    		color: #707070;
+    		padding: 0px 20px;
+			}
+		}
+	}
+}
+// End style Categories section
+
+
+// Start style Best Choice section 
+.best-choice-section {
+	margin-top: 500px;
+}
