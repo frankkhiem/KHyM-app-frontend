@@ -67,3 +67,20 @@ registerTab.addEventListener('click', function() {
 		registerTab.classList.add('active');
 		registerForm.classList.add('show');
 });
+
+// click vào button cuộn trang web lên đầu trang
+const scrollToTopBtn = $('#scroll-top-btn');
+window.onscroll = function() {scrollFunction()};
+
+const scrollFunction = function() {
+  if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+};
+
+scrollToTopBtn.addEventListener('click', function(){
+	document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});

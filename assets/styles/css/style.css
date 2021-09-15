@@ -600,4 +600,33 @@ footer {
   margin: 0 4px;
 }
 
+#scroll-top-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #52c756c6;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(110px);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+#scroll-top-btn span {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+#scroll-top-btn:hover {
+  background-color: #46b04a;
+}
+#scroll-top-btn.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
