@@ -41,24 +41,116 @@
 				</div>
 			</div>
 			<div class="user tool-item">
-				<span class="material-icons-outlined">
+				<span id="show-modal-login" class="material-icons-outlined">
 					person_outline
 				</span>
-				<div class="modal-login">
-					
+
+				<!-- Làm modal đăng ký/đăng nhập -->
+				<div class="modal-container overlay">
+					<div class="modal-login">
+						<span class="modal-login__closed material-icons-outlined">
+							close
+						</span>
+						<div class="modal-login__nav">
+							<div id="login-tab" class="modal-login-tab active">
+								Đăng nhập
+							</div>
+							<div id="register-tab" class="modal-login-tab">
+								Đăng ký
+							</div>
+						</div>
+						<div class="modal-login__content">
+
+							<!-- modal đăng nhập -->
+							<div id="login-form" class="modal-login-form show">
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Email or Username*">
+									<p class="form-error">
+									</p>
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Mật khẩu*">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-support">
+									<div class="check">
+										<input id="remember-check" class="form-checkbox" type="checkbox">
+										<label for="remember-check">			Remember me
+										</label>
+									</div>	
+									<a id="forgot-password" href="#">Forgot password?</a>
+								</div>
+								<div class="form-group">
+									<div class="login-btn">
+										Đăng nhập
+									</div>
+								</div>
+								<div id="login-other">
+									Cách khác
+								</div>
+								<div class="social-login google">
+									<img src="assets/images/google-logo.png" alt="">
+									<span>Google</span>
+								</div>
+								<div class="social-login facebook">
+									<img src="assets/images/facebook-logo.png" alt="">
+									<span>Facebook</span>
+								</div>
+							</div>
+
+							<!-- modal đăng ký -->
+							<div id="register-form" class="modal-login-form">
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Email*">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Họ tên*">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Furigana">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Mật khẩu*">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Xác nhận mật khẩu*">
+									<p class="form-error">
+									</p>	
+								</div>
+								<div class="form-group register-btn">
+									<div class="login-btn">
+										Đăng ký
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<!-- Làm ô thông báo tới người dùng -->
 			<div class="notification tool-item">
 				<span class="material-icons-outlined">
 					notifications
 				</span>
-				<span class="number-count">0</span>
+				<span class="number-count">4</span>
 			</div>
+
+			<!-- Làm ô giỏ hàng -->
 			<div class="cart tool-item">
 				<span class="material-icons-outlined number">
 					shopping_cart
 				</span>
-				<span class="number-count">0</span>
+				<span class="number-count">6</span>
 			</div>
 		</div>
 	</header>
@@ -173,7 +265,52 @@
 	</div>
 
 	<footer>
-		
+		<div class="middle-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						
+					</div>
+					<div class="col-md-3">
+						
+					</div>
+					<div class="col-md-3">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 copyright">
+						©2020 
+						<a class="company" href="#">KHyM. </a>
+						All right reserved
+					</div>
+					<div class="col-md-6 payment">
+						<a href="#">
+							<img src="assets/images/paypal5.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/paypal4.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/paypal3.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/paypal2.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/paypal1.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/paypal.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<script src="js/index.js">
