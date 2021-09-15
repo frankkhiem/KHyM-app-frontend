@@ -473,9 +473,113 @@ footer {
   width: 100%;
 }
 
+.middle-footer {
+  background-color: #ebeeee;
+  color: #707070;
+}
+.middle-footer .support {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.middle-footer .support::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  height: 75%;
+  border-right: 1px solid #fff;
+}
+.middle-footer .support .title {
+  display: inline-block;
+  font-size: 20px;
+  color: #2c2c2c;
+  text-align: center;
+  font-weight: 600;
+  margin: 25px 0 20px;
+}
+.middle-footer .support .list-items {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.middle-footer .support .item {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.middle-footer .support .item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  border-bottom: 1px solid #46b04a;
+  transition: width 0.2s linear;
+}
+.middle-footer .support .item:hover {
+  color: #46b04a;
+}
+.middle-footer .support .item:hover::after {
+  display: block;
+  width: 100%;
+}
+.middle-footer .contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.middle-footer .contact .logo-brand {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: #f39766;
+  padding: 6px 19px;
+  border-radius: 3px;
+  top: 0;
+  right: 0;
+  transform: translate(-12px, 50%);
+  cursor: pointer;
+}
+.middle-footer .contact .logo-brand img {
+  height: 36px;
+}
+.middle-footer .contact .contact-list {
+  margin-top: 70px;
+}
+.middle-footer .contact .contact-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.middle-footer .contact .contact-item span {
+  display: inline-block;
+  width: 100px;
+  color: #2c2c2c;
+}
+.middle-footer .contact .contact-item div {
+  flex-grow: 1;
+  color: #707070;
+}
+.middle-footer .contact .social .social-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 15px;
+}
+.middle-footer .contact .social .social-link img {
+  height: 40px;
+}
+
 .bottom-footer {
   padding: 26px 0;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   background-color: #ebeeee;
   color: #707070;
 }

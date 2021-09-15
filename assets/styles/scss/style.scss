@@ -573,9 +573,132 @@ footer {
 
 }
 
+.middle-footer {
+  background-color: #ebeeee;
+  color: #707070;
+
+  .support {
+  	display: flex;
+  	flex-direction: column;
+  	position: relative;
+
+  	&::after {
+  		content: "";
+	    position: absolute;
+	    right: 0;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    display: block;
+	    height: 75%;
+	    border-right: 1px solid #fff;
+  	}
+
+  	.title {
+  		display: inline-block;
+  		font-size: 20px;
+  		color: #2c2c2c;
+  		text-align: center;
+  		font-weight: 600;
+  		margin: 25px 0 20px;
+  	}
+
+  	.list-items {
+  		padding: 0;
+			display: flex;
+	    flex-direction: column;
+	    align-items: center;
+  	}
+
+  	.item {
+  		list-style: none;
+  		text-align: center;
+  		margin-bottom: 14px;
+  		cursor: pointer;
+    	position: relative;
+
+    	&::after {
+    		content: "";
+		    position: absolute;
+		    bottom: 0;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    width: 0;
+		    border-bottom: 1px solid #46b04a;
+		    transition: width 0.2s linear;
+    	}
+
+    	&:hover{
+    		color: #46b04a;
+
+    		&::after {
+    			display: block;
+    			width: 100%;
+    		}
+    	}
+  	}
+  }
+
+  .contact {
+  	display: flex;
+  	flex-direction: column;
+  	position: relative;
+
+  	.logo-brand {
+  		position: absolute;
+	    height: 50px;
+	    width: 100px;
+	    background-color: #f39766;
+	    padding: 6px 19px;
+	    border-radius: 3px;
+	    top: 0;
+	    right: 0;
+	    transform: translate(-12px, 50%);
+	    cursor: pointer;
+
+  		img {
+  			height: 36px;
+  		}
+  	}
+
+  .contact-list {
+  	margin-top: 70px;
+  }	
+
+  .contact-item {
+  		list-style: none;
+  		display: flex;
+  		align-items: center;
+  		margin-bottom: 15px;
+
+  		span {
+  			display: inline-block;
+  			width: 100px;
+  			color: #2c2c2c;
+  		}
+
+  		div {
+  			flex-grow: 1;
+  			color: #707070;
+  		}
+  	}
+
+  	.social {
+  		.social-link {
+  			text-decoration: none;
+  			display: inline-block;
+  			margin-left: 15px;
+
+  			img {
+  				height: 40px;
+  			}
+  		}
+  	}
+  }
+}
+
 .bottom-footer {
 	padding: 26px 0;
-	border-top: 1px solid #ffffff;
+	border-top: 1px solid #fff;
   background-color: #ebeeee;
   color: #707070;
 
