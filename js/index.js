@@ -104,7 +104,7 @@ const loadingPage = $('#loading-container');
 window.onload = function() {
 	setTimeout(function(){
 		loadingPage.classList.add('loaded');
-	}, 5000);
+	}, 3000);
 }
 
 
