@@ -96,3 +96,15 @@ scrollToTopBtn.addEventListener('click', function(){
 	document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+
+/**
+ * Code Js cho các component của Bootstrap
+ */
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+/**
+ * End code cho Bootstrap
+ */
