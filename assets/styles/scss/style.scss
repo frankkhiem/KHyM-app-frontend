@@ -813,3 +813,28 @@ footer {
   	opacity: 1;
   }
 }
+// End style button scroll to top
+
+
+// Start style loading page
+#loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+  z-index: 100;
+
+  .loading-image {
+  	max-width: 100%;
+  }
+
+  &.loaded {
+  	display: none;
+  }
+}
+// End style loading page 

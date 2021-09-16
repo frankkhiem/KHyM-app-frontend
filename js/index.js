@@ -98,6 +98,16 @@ scrollToTopBtn.addEventListener('click', function(){
 });
 
 
+// Tạo màn hình load trang web
+const loadingPage = $('#loading-container');
+
+window.onload = function() {
+	setTimeout(function(){
+		loadingPage.classList.add('loaded');
+	}, 5000);
+}
+
+
 /**
  * Code Js cho các component của Bootstrap
  */
