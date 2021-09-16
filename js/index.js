@@ -28,12 +28,24 @@ var userTool = $('#show-modal-login');
 var modalLoginContainer = $('.modal-container.overlay');
 var modalLogin = $('.modal-login');
 var closedModalLogin = $('.modal-login__closed');
+
 var closedModalLoginFn = function() {
-	modalLoginContainer.classList.remove('show');
+	modalLoginContainer.classList.add('visially-hidden'); 
+	modalLoginContainer.addEventListener('transitionend', function(e) {
+    modalLoginContainer.classList.add('hidden');
+  }, { 
+    capture: false , 
+    once: true , 
+    passive: false 
+  });
 };
 
 userTool.addEventListener('click', function() {
-	modalLoginContainer.classList.add('show');
+	modalLoginContainer.classList.remove('hidden');
+	setTimeout(function () {
+    modalLoginContainer.classList.remove('visially-hidden');
+  }, 1);
+	
 });
 
 modalLoginContainer.addEventListener('click', closedModalLoginFn);

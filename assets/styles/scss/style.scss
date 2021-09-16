@@ -199,20 +199,26 @@ header {
 		.user {
 
 			.modal-container {
-				display: none;
+				// display: none;
 				position: fixed;
 				top: 0;
 				bottom: 0;
 				right: 0;
 				left: 0;
-				// display: flex;
+				display: flex;
 				justify-content: center;
 				align-items: center;
 				cursor: default;
+				transition: all .3s linear;
 				z-index: 1;
+				opacity: 1;
 
-				&.show {
-					display: flex;
+				&.hidden {
+					display: none;
+				}
+
+				&.visially-hidden {
+					opacity: 0;
 				}
 
 				&.overlay {

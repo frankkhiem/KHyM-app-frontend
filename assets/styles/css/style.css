@@ -166,19 +166,24 @@ header .feature-tools .search .search-bar.show {
   transform: translateY(0);
 }
 header .feature-tools .user .modal-container {
-  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: default;
+  transition: all 0.3s linear;
   z-index: 1;
+  opacity: 1;
 }
-header .feature-tools .user .modal-container.show {
-  display: flex;
+header .feature-tools .user .modal-container.hidden {
+  display: none;
+}
+header .feature-tools .user .modal-container.visially-hidden {
+  opacity: 0;
 }
 header .feature-tools .user .modal-container.overlay {
   background-color: rgba(0, 0, 0, 0.3);
