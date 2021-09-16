@@ -556,7 +556,7 @@ footer {
   height: 36px;
 }
 .middle-footer .contact .contact-list {
-  margin-top: 70px;
+  margin-top: 77px;
 }
 .middle-footer .contact .contact-item {
   list-style: none;
@@ -580,6 +580,49 @@ footer {
 }
 .middle-footer .contact .social .social-link img {
   height: 40px;
+}
+.middle-footer .partner {
+  margin: 30px 0 50px;
+}
+.middle-footer .partner .title {
+  font-size: 21px;
+  text-transform: capitalize;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.middle-footer .partner .desc {
+  color: #2c2c2c;
+  margin-bottom: 25px;
+  text-align: center;
+  padding: 0 40px;
+}
+.middle-footer .partner .mail {
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+}
+.middle-footer .partner .mail .mail-form {
+  flex-grow: 1;
+  border: none;
+  padding: 10px 25px;
+  font-size: 15px;
+  color: #9a9a9a;
+  outline: none;
+}
+.middle-footer .partner .mail .mail-btn {
+  flex-basis: 70px;
+  text-align: center;
+  height: 46px;
+  line-height: 46px;
+  background-color: #46b04a;
+  color: #fff;
+  cursor: pointer;
+}
+.middle-footer .partner .mail .mail-btn:hover {
+  background-color: #2c2c2c;
+  color: #fff;
 }
 
 .bottom-footer {
