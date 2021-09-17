@@ -19,6 +19,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  display: none;
 }
 header .logo-header {
   height: 50px;
@@ -471,10 +472,20 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
 }
 
 .section-title {
+  margin: 0 0 40px;
+}
+
+.main-title {
   text-align: center;
   font-size: 44px;
   color: #2c2c2c;
-  margin: 0 0 40px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #707070;
+  margin-top: 5px;
 }
 
 .list-products .product-item {
@@ -633,6 +644,63 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
 .best-choice-section {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.about-section {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.about-section .illustration img {
+  width: 100%;
+}
+.about-section .introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-section .slogan {
+  color: #192a56;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 42px;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.about-section .desc {
+  font-size: 1rem;
+  color: #707070;
+}
+.about-section .desc p {
+  margin-bottom: 10px;
+  line-height: 28px;
+}
+.about-section .btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.about-section .btn-container .action-btn {
+  flex-grow: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 12px;
+  margin: 0 4px 4px 0;
+  color: #192a56;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 14px;
+}
+.about-section .btn-container .action-btn:hover, .about-section .btn-container .action-btn:hover .icon {
+  background-color: #46b04a;
+  color: #fff;
+}
+.about-section .btn-container .action-btn .icon {
+  color: #46b04a;
+  font-size: 30px;
+  margin-right: 5px;
 }
 
 footer {
