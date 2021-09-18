@@ -27,7 +27,11 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  // display: none;
+  transition: transform .3s linear;
+  
+  &.hidden {
+  	transform: translateY(-100%);
+  }
 
 	.logo-header {
 		height: 50px;
@@ -774,6 +778,10 @@ header {
 	margin-top: 50px;
 	margin-bottom: 100px;
 
+	.section-title {
+		margin: 0 0 20px;
+	}
+
 	.illustration {
 
 		img {
@@ -803,6 +811,7 @@ header {
 		p {
 			margin-bottom: 10px;
 			line-height: 28px;
+			text-align: justify;
 		}
 	}
 
@@ -838,6 +847,24 @@ header {
 			}
 		}
 	}
+
+	.learn-more-btn {
+		margin-top: 10px;
+    background-color: #192a56;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+    	transform: scaleY(1.05);
+    	background-color: #46b04a;
+			color: #fff;
+    }
+	}
+
 }
 // End style About section
 

@@ -19,6 +19,10 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
+  transition: transform 0.3s linear;
+}
+header.hidden {
+  transform: translateY(-100%);
 }
 header .logo-header {
   height: 50px;
@@ -649,6 +653,9 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
   margin-top: 50px;
   margin-bottom: 100px;
 }
+.about-section .section-title {
+  margin: 0 0 20px;
+}
 .about-section .illustration img {
   width: 100%;
 }
@@ -672,6 +679,7 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
 .about-section .desc p {
   margin-bottom: 10px;
   line-height: 28px;
+  text-align: justify;
 }
 .about-section .btn-container {
   display: flex;
@@ -700,6 +708,21 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
   color: #46b04a;
   font-size: 30px;
   margin-right: 5px;
+}
+.about-section .learn-more-btn {
+  margin-top: 10px;
+  background-color: #192a56;
+  color: #fff;
+  padding: 7px 25px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+.about-section .learn-more-btn:hover {
+  transform: scaleY(1.05);
+  background-color: #46b04a;
+  color: #fff;
 }
 
 footer {

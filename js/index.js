@@ -80,17 +80,37 @@ registerTab.addEventListener('click', function() {
 		registerForm.classList.add('show');
 });
 
-// click vào button cuộn trang web lên đầu trang
+// click vào button cuộn trang web lên đầu trang và cuộn để ẩn hiện header
 const scrollToTopBtn = $('#scroll-top-btn');
-window.onscroll = function() {scrollFunction()};
+const header = $('header');
 
-const scrollFunction = function() {
+let lastLocationScroll = window.pageYOffset || document.documentElement.scrollTop;
+window.onscroll = function() {
+	scrollToTopFunction();
+	scrollHiddenHeader();
+}
+
+const scrollToTopFunction = function() {
   if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
     scrollToTopBtn.classList.add('show');
   } else {
     scrollToTopBtn.classList.remove('show');
   }
 };
+
+const scrollHiddenHeader = function() {
+	let locationScroll = window.pageYOffset || document.documentElement.scrollTop;
+	if (locationScroll > lastLocationScroll) {
+		console.log('DOWN');
+		if (locationScroll > 500) {
+			header.classList.add('hidden');
+		}
+	}
+	else {
+		header.classList.remove('hidden');
+	}
+	lastLocationScroll = locationScroll <= 0 ? 0 : locationScroll; // For Mobile or negative scrolling
+}
 
 scrollToTopBtn.addEventListener('click', function(){
 	document.body.scrollTop = 0; // For Safari
