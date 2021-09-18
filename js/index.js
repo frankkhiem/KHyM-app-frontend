@@ -86,31 +86,31 @@ const header = $('header');
 
 let lastLocationScroll = window.pageYOffset || document.documentElement.scrollTop;
 window.onscroll = function() {
-	scrollToTopFunction();
-	scrollHiddenHeader();
+	handleScrollDownFunction();
 }
 
-const scrollToTopFunction = function() {
+const handleScrollDownFunction = function() {
   if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
     scrollToTopBtn.classList.add('show');
+    header.classList.add('white-header');
   } else {
     scrollToTopBtn.classList.remove('show');
+    header.classList.remove('white-header');
   }
 };
 
-const scrollHiddenHeader = function() {
-	let locationScroll = window.pageYOffset || document.documentElement.scrollTop;
-	if (locationScroll > lastLocationScroll) {
-		console.log('DOWN');
-		if (locationScroll > 500) {
-			header.classList.add('hidden');
-		}
-	}
-	else {
-		header.classList.remove('hidden');
-	}
-	lastLocationScroll = locationScroll <= 0 ? 0 : locationScroll; // For Mobile or negative scrolling
-}
+// const scrollHiddenHeader = function() {
+// 	let locationScroll = window.pageYOffset || document.documentElement.scrollTop;
+// 	if (locationScroll > lastLocationScroll) {
+// 		if (locationScroll > 500) {
+// 			header.classList.add('hidden');
+// 		}
+// 	}
+// 	else {
+// 		header.classList.remove('hidden');
+// 	}
+// 	lastLocationScroll = locationScroll <= 0 ? 0 : locationScroll; // For Mobile or negative scrolling
+// }
 
 scrollToTopBtn.addEventListener('click', function(){
 	document.body.scrollTop = 0; // For Safari

@@ -27,10 +27,11 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  transition: transform .3s linear;
+  transition: background-color .3s linear;
   
-  &.hidden {
-  	transform: translateY(-100%);
+  &.white-header {
+  	background-color: #fff;
+  	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
 	.logo-header {
@@ -568,7 +569,7 @@ header {
 // End style Categories section
 
 
-// Style chung cho các phần nội dung
+// Style chung cho các phần nội dung như tiêu đề phần, list item
 .section-title {
 	margin: 0 0 40px;
 }
@@ -867,6 +868,27 @@ header {
 
 }
 // End style About section
+
+
+// Start style Fresh choice section
+.fresh-choice-section {
+	
+}
+// End style Fresh choice section
+
+
+// Start style Feedback section
+.feedback-section {
+	
+}
+// End style Feedback section
+
+
+// Start style Statistic section
+.statistic-section {
+	
+}
+// End style Statistic section
 
 // Start style Footer section
 footer {
