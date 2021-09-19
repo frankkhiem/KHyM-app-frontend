@@ -732,6 +732,7 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
 }
 .feedback-section .feedback-slider {
   padding: 1rem;
+  user-select: none;
 }
 .feedback-section .slide-item {
   position: relative;
