@@ -582,7 +582,7 @@ header {
 
 .sub-title {
 	text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #707070;
   margin-top: 5px;
 }
@@ -879,14 +879,85 @@ header {
 
 // Start style Feedback section
 .feedback-section {
-	
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	.feedback-slider {
+		padding: 1rem;
+	}
+
+	.slide-item {
+		position: relative;
+		box-shadow: 0 0 10px 3px rgba(0, 0, 0, .1);
+		padding: 32px;
+		border-radius: 4px;
+
+		.quote-icon {
+			position: absolute;
+			top: 16px;
+			right: 32px;
+			color: #ccc;
+			font-size: 5rem;
+		}
+
+		.user {
+			display: flex;
+			align-items: center;
+		}
+
+		.user-avatar {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-right: 20px
+		}
+
+		.user-name {
+			font-size: 24px;
+			font-weight: 600;
+			color: #2c2c2c;
+			text-transform: capitalize;
+		}
+
+		.user-rate span {
+			font-size: 1.3rem;
+			color: #46b04a;
+		}
+
+		.comment {
+			color: #707070;
+			margin-top: 1rem;
+			text-align: justify;
+		}
+	}
+
 }
 // End style Feedback section
 
 
 // Start style Statistic section
 .statistic-section {
-	
+	margin-top: 50px;
+	margin-bottom: 100px;
+
+	.statistic-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.statistic-name {
+		font-size: 40px;
+		color: #707070;
+		margin-bottom: 1rem;
+	}
+
+	.statistic-value {
+		font-size: 32px;
+		color: #46b04a;
+		font-weight: 600;
+	}
 }
 // End style Statistic section
 

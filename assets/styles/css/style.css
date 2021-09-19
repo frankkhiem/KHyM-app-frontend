@@ -487,7 +487,7 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
 
 .sub-title {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #707070;
   margin-top: 5px;
 }
@@ -724,6 +724,73 @@ header .feature-tools .user .modal-container .modal-login .social-login.facebook
   transform: scaleY(1.05);
   background-color: #46b04a;
   color: #fff;
+}
+
+.feedback-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.feedback-section .feedback-slider {
+  padding: 1rem;
+}
+.feedback-section .slide-item {
+  position: relative;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  border-radius: 4px;
+}
+.feedback-section .slide-item .quote-icon {
+  position: absolute;
+  top: 16px;
+  right: 32px;
+  color: #ccc;
+  font-size: 5rem;
+}
+.feedback-section .slide-item .user {
+  display: flex;
+  align-items: center;
+}
+.feedback-section .slide-item .user-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.feedback-section .slide-item .user-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2c;
+  text-transform: capitalize;
+}
+.feedback-section .slide-item .user-rate span {
+  font-size: 1.3rem;
+  color: #46b04a;
+}
+.feedback-section .slide-item .comment {
+  color: #707070;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.statistic-section {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.statistic-section .statistic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statistic-section .statistic-name {
+  font-size: 40px;
+  color: #707070;
+  margin-bottom: 1rem;
+}
+.statistic-section .statistic-value {
+  font-size: 32px;
+  color: #46b04a;
+  font-weight: 600;
 }
 
 footer {

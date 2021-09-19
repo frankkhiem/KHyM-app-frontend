@@ -138,3 +138,27 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 /**
  * End code cho Bootstrap
  */
+
+
+/**
+ * Code Js cho Swiper Slider
+ */
+const swiper = new Swiper('.feedback-slider', {
+	speed: 500,
+  spaceBetween: 40,
+	autoplay: {
+	 delay: 7500,
+	 disableOnInteraction: false
+	},
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 1,
+  breakpoints: {
+  	1024: {
+  		slidesPerView: 2,
+  	}
+  }
+});
+/**
+ * End code cho Swiper Slider
+ */
