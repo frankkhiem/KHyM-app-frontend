@@ -25,6 +25,52 @@
 			<li>Blogs</li>
 			<li>Liên hệ</li>
 		</ul>
+		<div class="nav-menu">
+			<span class="menu-btn activated material-icons-outlined">
+				menu_open
+			</span>
+			<span class="menu-btn closed material-icons-outlined">
+				close
+			</span>
+			<div class="menu-container">				
+				<ul class="main-menu">
+					<li>
+						<a href="#">Tài khoản</a>
+						<span class="material-icons-outlined">
+							expand_more
+						</span>
+						<ul class="sub-menu">
+							<li>Đăng nhập</li>
+							<li>Thông báo</li>
+							<li>Giỏ hàng</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Trang chủ</a>
+					</li>
+					<li>
+						<a href="#">Danh mục</a>
+					</li>
+					<li>
+						<a href="#">Sản phẩm</a>
+					</li>
+					<li>
+						<a href="#">Sale Off</a>
+					</li>
+					<li>
+						<a href="#">Blogs</a>
+					</li>
+					<li>
+						<a href="#">Liên hệ</a>
+						<ul class="sub-menu">
+							<li>Đăng nhập</li>
+							<li>Thông báo</li>
+							<li>Giỏ hàng</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<div class="feature-tools">
 			<div class="search tool-item">
 				<span id="show-search" class="material-icons-outlined">
@@ -139,11 +185,67 @@
 			</div>
 
 			<!-- Làm ô thông báo tới người dùng -->
-			<div class="notification tool-item">
+			<div class="notifications tool-item">
 				<span class="material-icons-outlined">
 					notifications
 				</span>
 				<span class="number-count">4</span>
+				<div class="notifications-container">
+					<div class="notifications__title">
+						Thông báo
+					</div>
+					<div class="notifications__list-items">
+						<div class="notifications-item unseen">
+							<img src="./assets/images/macbook.png" alt="">
+							<div class="notifications-item__detail">
+								<div class="main-detail">
+									Đơn hàng #140627022000
+								</div>
+								<div class="sub-detail">
+									Đơn hàng của bạn đã được giao cho đơn vị vận chuyển.
+								</div>
+							</div>
+						</div>
+						<div class="notifications-item unseen">
+							<img src="./assets/logos/IconPage.png" alt="">
+							<div class="notifications-item__detail">
+								<div class="main-detail">
+									Thông báo từ KHyM Mobile
+								</div>
+								<div class="sub-detail">
+									Bạn đã trở thành khách hàng thân thiết của chúng tôi. Hãy tận hưởng...
+								</div>
+							</div>
+						</div>
+						<div class="notifications-item">
+							<img src="./assets/images/iphone-x-png-transparent.png" alt="">
+							<div class="notifications-item__detail">
+								<div class="main-detail">
+									Đơn hàng #270214062000
+								</div>
+								<div class="sub-detail">
+									Đơn hàng của bạn đã được giao thành công.
+								</div>
+							</div>
+						</div>
+						<div class="notifications-item">
+							<img src="./assets/images/hoanxu.png" alt="">
+							<div class="notifications-item__detail">
+								<div class="main-detail">
+									Hoàn xu với siêu Voucher 500k
+								</div>
+								<div class="sub-detail">
+									Voucher sắp hết hạn, hãy nhanh tay sử dụng nhé!
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="notifications__detail">
+						<div class="view-more">
+							Tất cả thông báo
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- Làm ô giỏ hàng -->
@@ -152,6 +254,63 @@
 					shopping_cart
 				</span>
 				<span class="number-count">6</span>
+				<div class="cart-container">
+					<div class="cart__title">
+						Giỏ hàng của bạn
+					</div>
+					<div class="cart__list-items">
+						<div class="cart-item">
+							<img src="./assets/images/iphone11-300x300.png" alt="" class="cart-item__image">
+							<div class="cart-item__detail">
+								<div class="cart-item__name">
+									Iphone 11 128GB
+								</div>
+								<div class="cart-item__promotion">
+									Giảm giá 10%
+								</div>
+								<div class="cart-item__price">
+									17.000.000 ₫
+								</div>
+							</div>
+						</div>
+						<div class="cart-item">
+							<img src="./assets/images/macbook.png" alt="" class="cart-item__image">
+							<div class="cart-item__detail">
+								<div class="cart-item__name">
+									Macbook Pro M1 2020
+								</div>
+								<div class="cart-item__promotion">
+									Giảm giá 15%
+								</div>
+								<div class="cart-item__price">
+									46.500.000 ₫
+								</div>
+							</div>
+						</div>
+						<div class="cart-item">
+							<img src="./assets/images/ipad.png" alt="" class="cart-item__image">
+							<div class="cart-item__detail">
+								<div class="cart-item__name">
+									Ipad Pro 2021
+								</div>
+								<div class="cart-item__promotion">
+									Giảm giá 10%
+								</div>
+								<div class="cart-item__price">
+									23.000.000 ₫
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__detail">
+						<div class="cart__detail-more">
+							Còn 3 sản phẩm nữa...
+						</div>
+						<div class="cart__detail-view">
+							Xem giỏ hàng
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -1285,7 +1444,7 @@
 	</div>
 
 	<!-- Tạo màn hình khi load trang -->
-	<div id="loading-container" class="">
+	<div id="loading-container" class="loaded">
 		<img class="loading-image" src="assets/logos/loading1.gif" alt="Loading page">
 	</div>
 

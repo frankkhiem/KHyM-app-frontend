@@ -1,0 +1,55 @@
+// responsive cho Mobile (width < 740px)
+@media (max-width: 739px) {
+
+
+}
+
+
+
+// responsive cho Tablet (740px <= width < 1024px)
+@media (max-width: 1023px) {
+	.header {
+		.nav {
+			display: none;
+		}
+
+		.feature-tools {
+			margin-right: 20px;
+
+			.tool-item {
+				display: none;
+
+				&.search {
+					display: block;
+
+					> span {
+						font-size: 2rem;
+					}
+
+					.search-bar__input {
+						padding: 10px 20px;
+					}
+
+					.search-bar__closed {
+						top: 10%;
+						right: 5%;
+					}
+				}
+			}
+		}
+
+		.nav-menu {
+			display: block;
+		}
+	}
+}
+
+
+// responsive cho PC (width >= 1024px)
+@media (min-width: 1024px) {
+	.header {
+		.nav-menu {
+			display: none;
+		}
+	}
+}
