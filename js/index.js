@@ -35,6 +35,28 @@ navMenuClosedBtn.addEventListener('click', function() {
 	document.body.classList.remove('noscroll');
 })
 
+let showSubMenuBtns = $$('.main-menu span.more');
+for (let btn of showSubMenuBtns) {
+	btn.addEventListener('click', function() {
+		let subMenu = btn.parentElement.nextElementSibling;
+		subMenu.classList.add('show');
+		console.log(btn);
+		btn.classList.add('hide');
+		btn.nextElementSibling.classList.remove('hide');
+	})	
+}
+
+let hideSubMenuBtns = $$('.main-menu span.less');
+for (let btn of hideSubMenuBtns) {
+	btn.addEventListener('click', function() {
+		let subMenu = btn.parentElement.nextElementSibling;
+		subMenu.classList.remove('show');
+		console.log(btn);
+		btn.classList.add('hide');
+		btn.previousElementSibling.classList.remove('hide');
+	})	
+}
+
 
 // click vào btn search hiển thị ra thanh search
 var searchTool = $('.search.tool-item #show-search');
