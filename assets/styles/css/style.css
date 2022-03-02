@@ -132,11 +132,12 @@ header .nav-menu .menu-container ul.main-menu > li > a > span.hide {
 }
 header .nav-menu .menu-container ul.sub-menu {
   list-style: none;
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
 }
 header .nav-menu .menu-container ul.sub-menu.show {
   margin-bottom: 10px;
-  display: block;
 }
 header .nav-menu .menu-container ul.sub-menu li {
   font-size: 16px;

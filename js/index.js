@@ -40,7 +40,8 @@ for (let btn of showSubMenuBtns) {
 	btn.addEventListener('click', function() {
 		let subMenu = btn.parentElement.nextElementSibling;
 		subMenu.classList.add('show');
-		console.log(btn);
+		let heightSubMenu = subMenu.childElementCount * 45;
+		subMenu.style.height = `${heightSubMenu}px`;
 		btn.classList.add('hide');
 		btn.nextElementSibling.classList.remove('hide');
 	})	
@@ -51,7 +52,7 @@ for (let btn of hideSubMenuBtns) {
 	btn.addEventListener('click', function() {
 		let subMenu = btn.parentElement.nextElementSibling;
 		subMenu.classList.remove('show');
-		console.log(btn);
+		subMenu.style.height = null;
 		btn.classList.add('hide');
 		btn.previousElementSibling.classList.remove('hide');
 	})	

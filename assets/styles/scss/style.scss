@@ -156,11 +156,12 @@ header {
 
   		ul.sub-menu {
   			list-style: none;
-  			display: none;
+  			height: 0;
+  			overflow: hidden;
+  			transition: height .4s ease;
 
   			&.show {
   				margin-bottom: 10px;
-  				display: block;
   			}
 
   			li {
