@@ -15,6 +15,7 @@ const detectClickOutsideElement = function(element, handle) {
   document.addEventListener('click', outsideClickListener)	
 }
 
+
 // ẩn hiện menu trên Mobile và Tablet
 let navMenuBtn = $('.nav-menu .menu-btn');
 let navMenuClosedBtn = $('.nav-menu .menu-btn.closed');
@@ -24,12 +25,14 @@ navMenuBtn.addEventListener('click', function() {
 	menuContainer.classList.add('show');
 	navMenuBtn.classList.remove('activated');
 	navMenuClosedBtn.classList.add('activated');
+	document.body.classList.add('noscroll');
 })
 
 navMenuClosedBtn.addEventListener('click', function() {
 	menuContainer.classList.remove('show');
 	navMenuBtn.classList.add('activated');
 	navMenuClosedBtn.classList.remove('activated');
+	document.body.classList.remove('noscroll');
 })
 
 

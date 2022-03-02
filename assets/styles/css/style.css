@@ -8,6 +8,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 header {
   height: 80px;
   background-color: #f4f7f2;
@@ -75,13 +79,12 @@ header .nav-menu > span.activated {
   display: block;
 }
 header .nav-menu .menu-container {
-  overflow-y: scroll;
   position: fixed;
   top: 80px;
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 0 20px 60px;
+  padding: 0 20px;
   background-color: #fff;
   transform: translateX(-100%);
   opacity: 0.2;
@@ -92,10 +95,11 @@ header .nav-menu .menu-container.show {
   opacity: 1;
 }
 header .nav-menu .menu-container ul.main-menu {
+  overflow-y: auto;
   list-style: none;
   background-color: #ebeeee;
   height: 100%;
-  padding: 20px 30px;
+  padding: 20px 30px 50px;
 }
 header .nav-menu .menu-container ul.main-menu > li {
   display: block;

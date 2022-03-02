@@ -14,6 +14,9 @@ body {
 $headerHeight: 80px;
 $mainGreenColor: #46b04a;
 
+.noscroll { 
+  overflow: hidden;
+}
 
 // Start style Header section
 header {
@@ -93,14 +96,13 @@ header {
   	}
 
   	.menu-container {
-  		overflow-y: scroll;
   		position: fixed;
   		top: 80px;
   		// max-height: 100vh;
   		bottom: 0;
   		right: 0;
   		left: 0;
-  		padding: 0 20px 60px;
+  		padding: 0 20px;
   		background-color: #fff;
   		transform: translateX(-100%);
     	opacity: 0.2;
@@ -112,10 +114,11 @@ header {
     	}
 
   		ul.main-menu {
+  			overflow-y: auto;
   			list-style: none;
   			background-color: #ebeeee;
   			height: 100%;
-  			padding: 20px 30px;
+  			padding: 20px 30px 50px;
 
   			> li {
   				display: block;
