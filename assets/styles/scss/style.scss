@@ -97,7 +97,7 @@ header {
   	}
 
   	.menu-container {
-  		overflow-y: scroll;
+  		overflow-y: auto;
   		position: fixed;
   		top: 80px;
   		bottom: 0;
@@ -158,7 +158,7 @@ header {
   			list-style: none;
   			height: 0;
   			overflow: hidden;
-  			transition: height .4s ease;
+  			transition: height .5s ease;
 
   			&.show {
   				margin-bottom: 10px;
