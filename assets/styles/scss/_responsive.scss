@@ -50,6 +50,17 @@
 // responsive cho Tablet (740px <= width < 1024px)
 @media (min-width: 740px) and (max-width: 1023px) {
 	.banner-section {
+		.banner-content {
+			.banner-heading {
+				font-size: 90px;
+
+				span {
+					font-size: 90px;
+					right: 20px;
+				}
+			}
+		}
+
 		.banner-image {
 			img {
 		    width: 90%;

@@ -1385,6 +1385,13 @@ footer {
   }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
+  .banner-section .banner-content .banner-heading {
+    font-size: 90px;
+  }
+  .banner-section .banner-content .banner-heading span {
+    font-size: 90px;
+    right: 20px;
+  }
   .banner-section .banner-image img {
     width: 90%;
     float: right;
