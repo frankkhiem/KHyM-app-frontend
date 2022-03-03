@@ -41,7 +41,98 @@
 		}		
 	}
 
-	// responsive categories section cho Mobile
+// responsive categories section cho Mobile
+	.categories-section {
+		margin: 40px 5px 0;
+
+		.category-item-content {
+			padding: 20px 0;
+
+			h6 {
+				padding: 0 6px;
+			}
+		}
+	}
+
+
+// responsive best-choice section cho Mobile
+	.best-choice-section {
+		margin: 0;
+	}
+
+// responsive product item cho Mobile
+	.list-products {
+		.product-item {
+			img {
+				height: 90%;
+				width: auto;
+			}
+		}
+	}
+
+// responsive about section
+	.about-section {
+		margin: 30px 0;
+
+		.slogan {
+			text-align: center;
+			font-size: 1.7rem;
+			margin-bottom: .5rem;
+		}
+
+		.btn-container {
+			margin-top: .5rem;
+		}
+
+		.learn-more-btn {
+			margin: 4px 4px 0 0;
+			display: block;
+			text-align: center;
+		}
+	}
+
+// responsive fresh-choice section Mobile
+	.fresh-choice-section {
+		.section-title {
+			margin-bottom: 20px;
+		}
+	}
+
+// responsive feedback section cho Mobile
+	.feedback-section {
+		margin: 1rem 0;
+
+		.section-title {
+			margin-bottom: 1.5rem;
+		}
+
+		.slide-item .quote-icon {
+			font-size: 3.5rem;
+			right: 1rem;
+		}
+	}
+
+// responsive statistic section cho Mobile
+	.statistic-section {
+    margin: 2rem 0;
+
+    .section-title {
+    	margin-bottom: 1rem;
+    }
+
+    .statistic-item {
+    	margin-bottom: .5rem;
+    }
+
+    .statistic-name {
+    	font-size: 2rem;
+    	margin: 0;
+    }
+
+    .statistic-value {
+    	font-size: 1.5rem;
+    }
+	}
 
 }
 
@@ -106,6 +197,12 @@
 
 		.nav-menu {
 			display: block;
+		}
+	}
+
+	.categories-section {
+		.category-item {
+			margin-bottom: 1rem;
 		}
 	}
 }

@@ -1315,6 +1315,7 @@ footer {
   transform: translateY(110px);
   opacity: 0;
   transition: all 0.3s linear;
+  z-index: 100;
 }
 #scroll-top-btn span {
   display: block;
@@ -1383,6 +1384,74 @@ footer {
   .banner-section .banner-image img {
     width: 80%;
   }
+
+  .categories-section {
+    margin: 40px 5px 0;
+  }
+  .categories-section .category-item-content {
+    padding: 20px 0;
+  }
+  .categories-section .category-item-content h6 {
+    padding: 0 6px;
+  }
+
+  .best-choice-section {
+    margin: 0;
+  }
+
+  .list-products .product-item img {
+    height: 90%;
+    width: auto;
+  }
+
+  .about-section {
+    margin: 30px 0;
+  }
+  .about-section .slogan {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-section .btn-container {
+    margin-top: 0.5rem;
+  }
+  .about-section .learn-more-btn {
+    margin: 4px 4px 0 0;
+    display: block;
+    text-align: center;
+  }
+
+  .fresh-choice-section .section-title {
+    margin-bottom: 20px;
+  }
+
+  .feedback-section {
+    margin: 1rem 0;
+  }
+  .feedback-section .section-title {
+    margin-bottom: 1.5rem;
+  }
+  .feedback-section .slide-item .quote-icon {
+    font-size: 3.5rem;
+    right: 1rem;
+  }
+
+  .statistic-section {
+    margin: 2rem 0;
+  }
+  .statistic-section .section-title {
+    margin-bottom: 1rem;
+  }
+  .statistic-section .statistic-item {
+    margin-bottom: 0.5rem;
+  }
+  .statistic-section .statistic-name {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .statistic-section .statistic-value {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
   .banner-section .banner-content .banner-heading {
@@ -1424,6 +1493,10 @@ footer {
   }
   .header .nav-menu {
     display: block;
+  }
+
+  .categories-section .category-item {
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 1024px) {

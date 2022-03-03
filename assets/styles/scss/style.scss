@@ -1579,6 +1579,7 @@ footer {
   transform: translateY(110px);
   opacity: 0;
 	transition: all 0.3s linear;
+	z-index: 100;
 
   span {
   	display: block;
