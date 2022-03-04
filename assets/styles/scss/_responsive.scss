@@ -93,6 +93,8 @@
 
 // responsive fresh-choice section Mobile
 	.fresh-choice-section {
+		margin-top: 40px;
+
 		.section-title {
 			margin-bottom: 20px;
 		}
@@ -132,6 +134,57 @@
     .statistic-value {
     	font-size: 1.5rem;
     }
+	}
+
+// responsive footer cho Mobile
+	.middle-footer {
+		.contact {
+			.logo-brand {
+				display: none;
+			}
+
+			.contact-list {
+				margin: 2rem 0 0;
+    		padding-left: 1rem;
+			}
+		}
+
+		.partner {
+			margin: 1rem 0 2rem;
+
+			.title {
+				margin-bottom: 10px;
+			}
+
+			.desc {
+				padding: 0 2rem;
+			}
+
+			.mail {
+				width: 85%;
+
+				.mail-btn {
+					flex-basis: 15%;
+				}
+
+				.mail-form {
+					padding: 10px 20px;
+				}
+			}
+		}
+	}
+
+	.bottom-footer {
+		padding: 20px 0;
+
+		.copyright {
+			text-align: center;
+			margin-bottom: .5rem;
+		}
+
+		.payment {
+			text-align: center;
+		}
 	}
 
 }
@@ -178,6 +231,7 @@
 
 				&.search {
 					display: block;
+					margin: 0;
 
 					> span {
 						font-size: 2rem;
