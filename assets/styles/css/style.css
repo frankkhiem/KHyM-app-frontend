@@ -1462,6 +1462,7 @@ footer {
   .middle-footer .contact .contact-list {
     margin: 2rem 0 0;
     padding-left: 1rem;
+    text-align: center;
   }
   .middle-footer .partner {
     margin: 1rem 0 2rem;
@@ -1506,6 +1507,80 @@ footer {
     float: right;
     margin: 0;
     margin-top: 50px;
+  }
+
+  .categories-section {
+    margin-top: 60px;
+  }
+
+  .best-choice-section {
+    margin: 2rem 0 0;
+  }
+
+  .list-products .product-item img {
+    height: 90%;
+    width: auto;
+  }
+
+  .about-section {
+    margin: 2rem 0 0;
+  }
+  .about-section .illustration img {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+  }
+  .about-section .slogan {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .about-section .learn-more-btn {
+    display: block;
+    text-align: center;
+    margin: 4px 4px 0 0;
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .fresh-choice-section {
+    margin-top: 50px;
+  }
+  .fresh-choice-section .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .feedback-section {
+    margin: 2rem 0 0;
+  }
+  .feedback-section .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .statistic-section {
+    margin-bottom: 50px;
+  }
+  .statistic-section .section-title {
+    margin-bottom: 1.5rem;
+  }
+  .statistic-section .statistic-name {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .statistic-section .statistic-value {
+    font-size: 1.5rem;
+  }
+
+  .middle-footer {
+    padding-top: 1rem;
+  }
+  .middle-footer .contact .logo-brand {
+    transform: translate(-20%, 20%);
+  }
+  .middle-footer .partner {
+    margin: 20px 0 40px;
+  }
+  .middle-footer .partner .mail {
+    width: 85%;
   }
 }
 @media (max-width: 1023px) {
