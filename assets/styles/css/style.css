@@ -49,6 +49,11 @@ header .nav li {
   cursor: pointer;
   position: relative;
 }
+header .nav li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 header .nav li::after {
   content: "";
   position: absolute;
@@ -59,7 +64,7 @@ header .nav li::after {
   border-bottom: 1px solid #46b04a;
   transition: width 0.2s linear;
 }
-header .nav li:hover {
+header .nav li:hover a {
   color: #46b04a;
 }
 header .nav li:hover::after {
@@ -149,6 +154,11 @@ header .nav-menu .menu-container ul.sub-menu li {
 }
 header .nav-menu .menu-container ul.sub-menu li:hover {
   background-color: #ddd;
+}
+header .nav-menu .menu-container ul.sub-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 header .feature-tools {
   display: flex;

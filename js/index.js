@@ -37,7 +37,8 @@ navMenuClosedBtn.addEventListener('click', function() {
 
 let showSubMenuBtns = $$('.main-menu span.more');
 for (let btn of showSubMenuBtns) {
-	btn.addEventListener('click', function() {
+	btn.addEventListener('click', function(event) {
+		event.preventDefault();
 		let subMenu = btn.parentElement.nextElementSibling;
 		subMenu.classList.add('show');
 		let heightSubMenu = subMenu.childElementCount * 45;
@@ -49,7 +50,8 @@ for (let btn of showSubMenuBtns) {
 
 let hideSubMenuBtns = $$('.main-menu span.less');
 for (let btn of hideSubMenuBtns) {
-	btn.addEventListener('click', function() {
+	btn.addEventListener('click', function(event) {
+		event.preventDefault();
 		let subMenu = btn.parentElement.nextElementSibling;
 		subMenu.classList.remove('show');
 		subMenu.style.height = null;
@@ -208,7 +210,7 @@ window.onscroll = function() {
 	handleScrollDownFunction();
 }
 
-const handleScrollDownFunction = function() {
+var handleScrollDownFunction = function() {
   if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
     scrollToTopBtn.classList.add('show');
     header.classList.add('white-header');
