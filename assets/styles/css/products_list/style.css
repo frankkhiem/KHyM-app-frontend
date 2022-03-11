@@ -1,6 +1,7 @@
 .intro-category {
   margin-top: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -42,6 +43,7 @@
 }
 .filter .filter-title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   color: #2c2c2c;
@@ -51,6 +53,7 @@
 }
 .filter .products-count {
   font-size: 14px;
+  display: none;
 }
 .filter .filter-btns {
   display: flex;
@@ -387,7 +390,8 @@
   margin-bottom: 6rem;
 }
 .paginate-section .previous-btn {
-  margin-right: 16px;
+  display: none;
+  margin-right: 2rem;
   transition: transform 0.2s linear;
 }
 .paginate-section .previous-btn:hover {
@@ -414,6 +418,31 @@
   border-bottom: 19px solid transparent;
   border-right: 20px solid #46b04a;
   transform: translateX(-100%);
+}
+.paginate-section .previous-btn-small {
+  margin-right: 1rem;
+  width: 38px;
+  height: 38px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+.paginate-section .previous-btn-small:hover {
+  background-color: #46b04a;
+}
+.paginate-section .previous-btn-small:hover a {
+  color: #fff;
+}
+.paginate-section .previous-btn-small a {
+  display: block;
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #707070;
+  font-size: 20px;
+  transition: color 0.2s linear;
 }
 .paginate-section .page-number-btn {
   margin: 0 0.5rem;
@@ -444,7 +473,8 @@
   transition: color 0.2s linear;
 }
 .paginate-section .next-btn {
-  margin-left: 16px;
+  display: none;
+  margin-left: 2rem;
   transition: transform 0.2s linear;
 }
 .paginate-section .next-btn:hover {
@@ -472,6 +502,31 @@
   border-left: 20px solid #46b04a;
   transform: translateX(100%);
 }
+.paginate-section .next-btn-small {
+  margin-left: 1rem;
+  width: 38px;
+  height: 38px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+.paginate-section .next-btn-small:hover {
+  background-color: #46b04a;
+}
+.paginate-section .next-btn-small:hover a {
+  color: #fff;
+}
+.paginate-section .next-btn-small a {
+  display: block;
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #707070;
+  font-size: 20px;
+  transition: color 0.2s linear;
+}
 .paginate-section .page-etc {
   margin: 0 10px;
   letter-spacing: 8px;
@@ -479,6 +534,93 @@
   color: #707070;
   font-size: 20px;
   font-weight: 600;
+}
+
+@media (max-width: 739px) {
+  .intro-category .category-name {
+    margin: 0 1rem 1rem;
+  }
+  .intro-category .category-path {
+    margin: 0 1rem;
+  }
+
+  .filter {
+    margin-top: 0.5rem;
+  }
+  .filter .filter-title {
+    padding-left: 1rem;
+  }
+  .filter .filter-btns {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+  .filter .filter-btns .filter-btn {
+    width: 110px;
+    flex-shrink: 0;
+  }
+  .filter .filter-btns .sorter-btn span {
+    margin: 5px 0 0 4px;
+  }
+  .filter .products-count.small {
+    display: block;
+  }
+
+  .products-section {
+    margin-top: 1.5rem;
+  }
+  .products-section .item {
+    margin-bottom: 6rem;
+  }
+  .products-section .item-actions {
+    display: none;
+  }
+
+  .paginate-section {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+  .paginate-section .page-number-btn:nth-child(5) {
+    display: none;
+  }
+  .paginate-section .page-number-btn:nth-child(7) {
+    display: none;
+  }
+  .paginate-section .page-number-btn:nth-child(8) {
+    display: none;
+  }
+  .paginate-section .previous-btn-small {
+    display: flex;
+  }
+  .paginate-section .next-btn-small {
+    display: flex;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .filter .products-count.small {
+    display: block;
+  }
+
+  .paginate-section {
+    margin-bottom: 4rem;
+  }
+  .paginate-section .previous-btn-small {
+    display: flex;
+  }
+  .paginate-section .next-btn-small {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .filter .products-count.large {
+    display: block;
+  }
+
+  .paginate-section .previous-btn {
+    display: block;
+  }
+  .paginate-section .next-btn {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
