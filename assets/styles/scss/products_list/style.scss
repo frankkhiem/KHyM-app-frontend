@@ -417,8 +417,13 @@ $mainGreenColor: #46b04a;
 		}
 	}
 
+	.item-detail {
+		padding: 0 1rem;
+	}
+
 	.item-rate {
 		color: #facb0c;
+		cursor: default;
 
 		i {
 			margin-right: 5px;
