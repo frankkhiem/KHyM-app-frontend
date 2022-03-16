@@ -157,3 +157,78 @@ for (let btn of ratingBtns) {
     location.reload();
   });
 }
+
+// click buy count btns
+let subBtn = $('.buy-count__btn.minus');
+let addBtn = $('.buy-count__btn.plus');
+subBtn.addEventListener('click', function() {
+  let input = $('.buy-count__number input');
+  let number = Number(input.value);
+  if( number > 1 ) {
+    input.value = --number;
+  }
+});
+
+addBtn.addEventListener('click', function() {
+  let input = $('.buy-count__number input');
+  let number = Number(input.value);
+  input.value = ++number;
+});
+
+// đặt màu nền xen kẽ cho thông số sản phẩm
+let specificationsItems = $$('.specifications .item');
+for( let i = 0; i < specificationsItems.length; i++ ) {
+  if( i % 2 === 0 ) {
+    specificationsItems[i].style.backgroundColor = '#f5f5f5';
+  }
+}
+
+// chuyển nav giữa đặc điểm nổi bật và đánh giá
+let salientDetailBtn = $('.describe__nav div:nth-child(1)');
+let salientDetailContainer = $('.describe__detail');
+let reviewDetailBtn = $('.describe__nav div:nth-child(2)');
+let reviewDetailContainer = $('.describe__review');
+
+salientDetailBtn.addEventListener('click', function() {
+  reviewDetailBtn.classList.remove('active');
+  reviewDetailContainer.classList.remove('active');
+  salientDetailBtn.classList.add('active');
+  salientDetailContainer.classList.add('active');
+});
+
+reviewDetailBtn.addEventListener('click', function() {
+  salientDetailBtn.classList.remove('active');
+  salientDetailContainer.classList.remove('active');
+  reviewDetailBtn.classList.add('active');
+  reviewDetailContainer.classList.add('active');
+});
+
+// chọn số lượng sao trong phần đánh giá
+let starsRating = $$('.your-rating i');
+let starsCount = 0;
+for( let i = 0; i < starsRating.length; i++ ) {
+  $('.your-rating').addEventListener('mouseleave', function() {
+    starsActive(starsCount);
+  });
+  starsRating[i].addEventListener('click', function() {
+    starsActive(i + 1);
+    starsCount = i + 1;
+  });
+  starsRating[i].addEventListener('mouseenter', function() {
+    if( i + 1 > starsCount ) {
+      starsActive(i + 1);
+    }
+  });
+}
+
+const starsActive = function(number) {
+  for( let i = 0; i < number; i++ ) {
+    starsRating[i].classList.remove('fa-regular');
+    starsRating[i].classList.add('fa-solid');
+  }
+
+  for( let i = number; i < starsRating.length; i++ ) {
+    starsRating[i].classList.add('fa-regular');
+    starsRating[i].classList.remove('fa-solid');
+  }
+}
