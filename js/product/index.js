@@ -232,3 +232,221 @@ const starsActive = function(number) {
     starsRating[i].classList.remove('fa-solid');
   }
 }
+
+// xử lý khi ấn nút gửi comment
+$('.your-comment button').addEventListener('click', function() {
+  location.href = './';
+});
+
+
+// style modal thông số chi tiết sản phẩm
+let configBlocks = $$('.specifications-modal .config-block');
+configBlocks.forEach(function(element) {
+  Array.from(element.children).forEach(function(item, index) {
+    if( index % 2 === 0 ) {
+      item.classList.add('odd');
+    }
+  });
+});
+
+// bật tắt modal thông số chi tiết sản phẩm
+let specificationsModal = $('.specifications-modal');
+
+let specificationsModalBtn = $('.specifications .more-btn');
+specificationsModalBtn.addEventListener('click', function(){
+  specificationsModal.style.display = 'block';
+  document.body.classList.add('noscroll');
+  setTimeout(function() {
+    specificationsModal.style.opacity = '1';
+  }, 1);
+});
+
+const closeSpecificationsModalFn = function() {
+  specificationsModal.style.opacity = '0';
+  setTimeout(function() {
+    $('.specifications-modal .overlay').scrollTop = 0;
+    specificationsModal.style.display = 'none';
+    document.body.classList.remove('noscroll');
+  }, 301);
+};
+
+let closeSpecificationsModalBtn1 = $('.specifications-modal .modal-close-icon');
+closeSpecificationsModalBtn1.addEventListener('click', closeSpecificationsModalFn);
+
+let closeSpecificationsModalBtn2 = $('.specifications-modal .modal-close-btn button');
+closeSpecificationsModalBtn2.addEventListener('click', closeSpecificationsModalFn);
+
+let overlaySpecificationsModal = $('.specifications-modal .overlay');
+overlaySpecificationsModal.addEventListener('click', closeSpecificationsModalFn);
+
+let specificationsModalContainer = $('.specifications-modal .modal-container');
+specificationsModalContainer.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+// xử lý Modal ảnh sản phẩm
+let sliderDisplaySize = $('.images-modal .slider-display').offsetWidth;
+
+let currentIndex2 = 1;
+let prevSliderBtn = $('.slider-btn.previous');
+let nextSliderBtn = $('.slider-btn.next');
+
+let imagesModal = $('.images-modal');
+let sliderContainer = $('.images-modal .slider-container');
+
+let thumnailImages = $$('.images-modal .thumnail-item');
+
+prevSliderBtn.addEventListener('click', function() {
+  showImageSlide(--currentIndex2);
+  sliderContainer.style.transition = 'transform .3s ease-out';
+});
+
+nextSliderBtn.addEventListener('click', function() {
+  showImageSlide(++currentIndex2);
+  sliderContainer.style.transition = 'transform .3s ease-out';
+});
+
+let numbersImage = sliderContainer.childElementCount;
+let firstImage = sliderContainer.firstElementChild;
+let lastImage = sliderContainer.lastElementChild;
+sliderContainer.prepend(lastImage.cloneNode(true));
+sliderContainer.append(firstImage.cloneNode(true));
+
+
+// Hàm hiển thị ảnh thứ index trên slider
+const showImageSlide = function(index) {
+  sliderContainer.style.transform = `translateX(${index * (-sliderDisplaySize)}px)`;
+  if( index === 0 ) {
+    thumnailModalActive(7);
+    setTimeout(() => {
+      currentIndex2 = numbersImage;
+      sliderContainer.style.transition = null;
+      showImageSlide(currentIndex2);
+    }, 301);
+  }
+  else if( index === numbersImage + 1 ) {
+    thumnailModalActive(0);
+    setTimeout(() => {
+      currentIndex2 = 1;
+      sliderContainer.style.transition = null;
+      showImageSlide(currentIndex2);
+    }, 301);
+  }
+  else {
+    currentIndex2 = index;
+    thumnailModalActive(index - 1);
+  }
+}
+
+const thumnailModalActive = function(index) {
+  let currentThumnailActived = $('.images-modal .thumnail-item.active');
+  if( currentThumnailActived ) {
+    currentThumnailActived.classList.remove('active');
+  }
+  thumnailImages[index].classList.add('active');
+}
+
+thumnailImages.forEach(function(thumn, index) {
+  thumn.addEventListener('click', function() {
+    let numbersSlideMoved = Math.abs(index + 1 - currentIndex2);
+    // console.log(numbersSlideMoved);
+    sliderContainer.style.transition = `transform ${0.3 + (numbersSlideMoved - 1) * 0.07}s ease-out`;
+    showImageSlide(index + 1);
+  });
+});
+
+// Xử lý kéo thả chuột trên modal images
+const getTranslateX = function(element) {
+  let style = window.getComputedStyle(element);
+  let matrix = new WebKitCSSMatrix(style.transform);
+  return matrix.m41;
+}
+
+let posSliderDrag = {
+  x: 0,
+  translateX: 0
+}
+
+const mouseDownSliderHandle = function(e) {
+  sliderContainer.style.cursor = 'grabbing';
+  sliderContainer.style.transition = null;
+
+  posSliderDrag = {
+    x: e.clientX,
+    translateX: getTranslateX(sliderContainer)
+  }
+  // console.log(posSliderDrag);
+  sliderContainer.addEventListener('mousemove', mouseMoveSliderHandle);
+  document.addEventListener('mouseup', mouseUpSliderHandle);
+}
+
+const mouseMoveSliderHandle = function(e) {
+  let moveSize = posSliderDrag.x - e.clientX;
+  sliderContainer.style.transform = `translateX(${posSliderDrag.translateX - moveSize}px)`;
+  // console.log(Math.abs(moveSize));
+}
+
+const mouseUpSliderHandle = function(e) {
+  sliderContainer.removeEventListener('mousemove', mouseMoveSliderHandle);
+  document.removeEventListener('mouseup', mouseUpSliderHandle);
+
+  let moveSize = posSliderDrag.x - e.clientX;
+  // console.log(moveSize);
+  const scrollDirection = function(value) {
+    if( value < 0 ) {
+      showImageSlide(--currentIndex2);
+    }
+    else {
+      showImageSlide(++currentIndex2);
+    }
+  }
+
+  if( Math.abs(moveSize) < 64 ) {
+    sliderContainer.style.transition = `transform 0.1s ease-out`;
+    showImageSlide(currentIndex2);
+  }
+  else if ( Math.abs(moveSize) > sliderDisplaySize ) {
+    sliderContainer.style.transition = `transform 0.1s ease-out`;
+    scrollDirection(moveSize);
+  }
+  else {
+    sliderContainer.style.transition = `transform ${0.3 * ((sliderDisplaySize - Math.abs(moveSize)) / sliderDisplaySize)}s ease-out`;
+    scrollDirection(moveSize);
+  }
+
+  sliderContainer.style.cursor = 'default';
+}
+
+sliderContainer.addEventListener('mousedown', mouseDownSliderHandle);
+
+
+// Xử lý bật tắt modal ảnh
+let zoomBtns = $$('.main-image__container .zoom-btn');
+zoomBtns.forEach(function(btn, index) {
+  btn.addEventListener('mousemove', function(e) {
+    e.stopPropagation();
+    offZoom(e, index);
+  });
+
+  btn.addEventListener('click', function() {
+    imagesModal.style.display = 'block';
+    sliderDisplaySize = $('.images-modal .slider-display').offsetWidth;
+    sliderContainer.style.transition = null;
+    showImageSlide(index + 1);
+  });
+});
+
+let closeImagesModalBtn = $('.images-modal .modal-close-icon');
+closeImagesModalBtn.addEventListener('click', function() {
+  imagesModal.style.display = 'none';
+});
+
+let overlayImagesModal = $('.images-modal .overlay');
+overlayImagesModal.addEventListener('click', function() {
+  imagesModal.style.display = 'none';
+});
+
+let imagesModalContainer = $('.images-modal .modal-container');
+imagesModalContainer.addEventListener('click', function(e) {
+  e.stopPropagation();
+});

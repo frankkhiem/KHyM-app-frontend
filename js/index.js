@@ -98,7 +98,7 @@ var closedModalLoginFn = function() {
 	modalLoginContainer.classList.add('visially-hidden'); 
 	modalLoginContainer.addEventListener('transitionend', function(e) {
     modalLoginContainer.classList.add('hidden');
-  }, { 
+  }, {
     capture: false , 
     once: true , 
     passive: false 

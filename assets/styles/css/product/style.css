@@ -16,14 +16,30 @@
   max-width: 450px;
   height: 450px;
   overflow: hidden;
+  position: relative;
 }
 .intro-section .main-image__container img {
   width: 100%;
   height: 100%;
   transform-origin: center center;
   object-fit: cover;
-  cursor: zoom-in;
+  cursor: crosshair;
   transition: transform 0.2s ease;
+}
+.intro-section .main-image__container .zoom-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #707070;
+  cursor: pointer;
+}
+.intro-section .main-image__container .zoom-btn:hover {
+  color: #2c2c2c;
 }
 .intro-section .main-rating__container .rating {
   width: 450px;
@@ -549,6 +565,9 @@
   margin-top: 24px;
   text-align: center;
 }
+.information-section .describe .customer-reviews .more-btn a {
+  display: inline-block;
+}
 .information-section .describe .customer-reviews .more-btn span {
   display: inline-block;
   padding: 5px 45px;
@@ -782,6 +801,230 @@
   font-size: 16px;
   font-weight: 600;
   color: #ec5330;
+}
+
+.modal-page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  transition: opacity 0.3s linear;
+}
+.modal-page .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.specifications-modal {
+  display: none;
+  opacity: 0;
+}
+.specifications-modal .overlay {
+  overflow-y: scroll;
+}
+.specifications-modal .modal-container {
+  max-width: 700px;
+  background-color: #fff;
+  margin: 4.5rem auto;
+  border-radius: 0.5rem;
+  padding-bottom: 4rem;
+  position: relative;
+}
+.specifications-modal .modal-container .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: #46b04a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0px solid transparent;
+  border-bottom: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.specifications-modal .modal-container .config-title {
+  margin: 1rem 0 0.5rem;
+  padding: 0 1.5rem;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+.specifications-modal .modal-container .config-block {
+  margin: 0 1.5rem;
+  border: 1px solid #ebeeee;
+  border-radius: 0.5rem;
+}
+.specifications-modal .modal-container .config-block .item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #3c3c3c;
+}
+.specifications-modal .modal-container .config-block .item.odd {
+  background-color: #ebeeee;
+}
+.specifications-modal .modal-container .config-block .item .config-name {
+  width: 35%;
+  flex-shrink: 0;
+}
+.specifications-modal .modal-container .config-block .item .config-value {
+  flex-grow: 1;
+}
+.specifications-modal .modal-close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  transform: translate(50%, -50%);
+  text-align: center;
+  line-height: 2rem;
+  background-color: #46b04a;
+  border-radius: 1rem;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+.specifications-modal .modal-close-icon:hover {
+  opacity: 0.9;
+}
+.specifications-modal .modal-close-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+}
+.specifications-modal .modal-close-btn button {
+  padding: 4px 12px;
+  border: 1px solid #46b04a;
+  background-color: #46b04a;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.specifications-modal .modal-close-btn button:hover {
+  opacity: 0.9;
+}
+
+.images-modal {
+  display: none;
+}
+.images-modal .modal-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+.images-modal .modal-close-icon {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 22px;
+  text-align: center;
+  top: 0;
+  right: 0;
+  color: #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.images-modal .modal-close-icon:hover {
+  color: #999;
+}
+.images-modal .slider {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.images-modal .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.images-modal .slider-btn:hover {
+  background-color: #fbfbfb;
+  color: #ccc;
+}
+.images-modal .slider-btn.previous {
+  left: 2rem;
+}
+.images-modal .slider-btn.next {
+  right: 2rem;
+}
+.images-modal .slider-display {
+  max-width: 520px;
+  max-height: 520px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.images-modal .slider-container {
+  display: flex;
+  width: fit-content;
+  height: 520px;
+  cursor: default;
+}
+.images-modal .slider-container .slider-item {
+  height: 100%;
+  width: 520px;
+}
+.images-modal .slider-container .slider-item img {
+  width: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.images-modal .thumnails {
+  width: 100%;
+  height: 12%;
+  padding-bottom: 4px;
+  overflow-x: auto;
+}
+.images-modal .thumnails::-webkit-scrollbar {
+  display: none;
+}
+.images-modal .thumnails .thumnails-container {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.images-modal .thumnails .thumnail-item {
+  height: 100%;
+  padding: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.images-modal .thumnails .thumnail-item.active {
+  border: 2px solid #46b04a;
+  border-radius: 8px;
+}
+.images-modal .thumnails .thumnail-item img {
+  width: auto;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
