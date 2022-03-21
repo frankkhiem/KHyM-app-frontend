@@ -58,7 +58,7 @@
 	}
 
 	.information-section {
-		margin-top: 3rem;
+		margin-top: 4rem;
 
 		.describe {
 			margin-bottom: 2rem;
@@ -86,11 +86,12 @@
 	}
 
 	.recommend-section {
-		margin-top: 3rem;
-		margin-bottom: 0;
-
 		.section-title {
 			margin-bottom: 2rem;
+		}
+
+		.item-actions {
+			display: none;
 		}
 	}
 
@@ -106,6 +107,42 @@
 
 		.modal-close-btn {
 			bottom: 1.5rem;
+		}
+	}
+
+	.images-modal {
+		.slider {
+			height: 83%;
+		}
+
+		.thumnails {
+			height: 14%;
+		}
+
+		.slider-btn {
+			z-index: 1;
+			background-color: #ffffff33;
+			color: #bbb;
+
+			&:hover {
+    		background-color: #ffffff80;
+    		color: #afafaf;
+    	}
+
+			&.previous {
+				left: 0;
+			}
+
+			&.next {
+				right: 0;
+			}
+		}
+
+		.slider-container {
+			.slider-item {
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 }

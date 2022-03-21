@@ -1072,7 +1072,7 @@
   }
 
   .information-section {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   .information-section .describe {
     margin-bottom: 2rem;
@@ -1092,12 +1092,11 @@
     margin-top: 20px;
   }
 
-  .recommend-section {
-    margin-top: 3rem;
-    margin-bottom: 0;
-  }
   .recommend-section .section-title {
     margin-bottom: 2rem;
+  }
+  .recommend-section .item-actions {
+    display: none;
   }
 
   .specifications-modal .modal-container {
@@ -1109,6 +1108,32 @@
   }
   .specifications-modal .modal-close-btn {
     bottom: 1.5rem;
+  }
+
+  .images-modal .slider {
+    height: 83%;
+  }
+  .images-modal .thumnails {
+    height: 14%;
+  }
+  .images-modal .slider-btn {
+    z-index: 1;
+    background-color: #ffffff33;
+    color: #bbb;
+  }
+  .images-modal .slider-btn:hover {
+    background-color: #ffffff80;
+    color: #afafaf;
+  }
+  .images-modal .slider-btn.previous {
+    left: 0;
+  }
+  .images-modal .slider-btn.next {
+    right: 0;
+  }
+  .images-modal .slider-container .slider-item {
+    display: flex;
+    align-items: center;
   }
 }
 @media (min-width: 740px) and (max-width: 1023px) {

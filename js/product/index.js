@@ -440,6 +440,12 @@ zoomBtns.forEach(function(btn, index) {
     imagesModal.style.display = 'block';
     sliderDisplaySize = $('.images-modal .slider-display').offsetWidth;
     sliderContainer.style.transition = null;
+
+    // Xử lý responsive Modal ảnh
+    $$('.images-modal .slider-container .slider-item').forEach(function(item) {
+      item.style.width = `${sliderDisplaySize}px`;
+    });
+
     showImageSlide(index + 1);
     document.body.classList.add('noscroll');
     setTimeout(function() {
