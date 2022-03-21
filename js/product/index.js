@@ -367,10 +367,14 @@ const thumnailModalActive = function(index) {
   }
   thumnailImages[index].classList.add('active');
   if( index === 0 ) {
-    thumnailsContainer.scrollLeft = 0;
+    setTimeout(() => {
+      thumnailsContainer.scrollLeft = 0;
+    }, 1);
   }
   else if( index + 1 === numbersImage ) {
-    thumnailsContainer.scrollLeft = sliderDisplaySize + currentThumnailActived.offsetWidth;
+    setTimeout(() => {
+      thumnailsContainer.scrollLeft = sliderDisplaySize + currentThumnailActived.offsetWidth;
+    }, 1);
   }
 }
 
