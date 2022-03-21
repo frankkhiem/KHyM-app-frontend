@@ -1,0 +1,132 @@
+// reponsive cho Mobile
+@media (max-width: 739px) {
+	.intro-section {
+		padding-top: 1rem;
+
+		.page-path.above {
+			padding-left: .5rem;
+			margin-bottom: 0;
+		}
+
+		.page-path.below {
+			display: none;
+		}
+
+		.intro-images {
+
+		}
+
+		.main-image__container {
+			img {
+				object-fit: contain;
+			}
+		}
+
+		.sub-images {
+			margin-top: 1rem;
+		}
+
+		.product-name {
+			margin-top: 2rem;
+			margin-bottom: .5rem;
+		}
+
+		.product-price {
+			margin-top: 1.5rem;
+		}
+
+		.product-action {
+			flex-wrap: wrap;
+			margin-top: 2.5rem;
+
+			.add-to-cart {
+				order: 3;
+				margin: 10px 0 0 0;
+    		width: 100%;
+    		font-size: 1rem;
+			}
+		}
+
+		.social-sharing {
+			justify-content: space-evenly;
+			margin-top: 2rem;
+
+			.social-btn {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.information-section {
+		margin-top: 3rem;
+
+		.describe {
+			margin-bottom: 2rem;
+
+			.review-rating {
+				margin-bottom: 2rem;
+			}
+
+			.your-comment:after {
+				bottom: -0.5rem;
+			}
+
+			.customer-reviews {
+				margin-top: 1.5rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		.specifications {
+			.more-btn {
+				width: 100%;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.recommend-section {
+		margin-top: 3rem;
+		margin-bottom: 0;
+
+		.section-title {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.specifications-modal {
+		.modal-container {
+			padding-bottom: 5rem;
+
+			.config-block .item .config-name {
+				width: 40%;
+				padding-right: 1rem;
+			}
+		}
+
+		.modal-close-btn {
+			bottom: 1.5rem;
+		}
+	}
+}
+
+
+// reponsive cho Tablet
+@media (min-width: 740px) and (max-width: 1023px) {
+	.intro-section {
+		.page-path.above {
+			display: none;
+		}
+	}
+}
+
+
+
+// reponsive cho PC
+@media (min-width: 1024px) {
+	.intro-section {
+		.page-path.above {
+			display: none;
+		}
+	}
+}

@@ -11,11 +11,19 @@ let sliderImages1 = $('.main-images__slider');
 let currentIndex1 = 1;
 let numbersSlideMoved = 0;
 let indicatorBtns = $$('.sub-images .item');
+let imageProductSize = $('.intro-images .slider-container').offsetWidth;
+
+$$('.intro-section .main-image__container').forEach(function(container) {
+  container.style.width = `${imageProductSize}px`;
+});
+$('.intro-section .main-rating__container').style.width = `${imageProductSize}px`;
+$('.main-rating__container .rating').style.width = `100%`;
+$('.intro-section .main-images__slider').style.transform = `translateX(${-imageProductSize}px)`;
 
 for( let i = 0; i < indicatorBtns.length; i++ ) {
   indicatorBtns[i].addEventListener('click', function() {
     numbersSlideMoved = Math.abs( i - currentIndex1 );
-    sliderImages1.style.transform = `translateX(${(i) * (-450)}px)`;
+    sliderImages1.style.transform = `translateX(${(i) * (-imageProductSize)}px)`;
     currentIndex1 = i;
     addTransition(numbersSlideMoved);
     activeIndicator(i);
@@ -129,8 +137,8 @@ const mouseUpHandler = function () {
     dragSubImages.scrollLeft = 185;
   }
 
-  if( dragSubImages.scrollLeft > 580 ) {
-    dragSubImages.scrollLeft = 580;
+  if( dragSubImages.scrollLeft > 620 ) {
+    dragSubImages.scrollLeft = 620;
   }
 
   dragSubImages.style.cursor = 'grab';
@@ -433,17 +441,30 @@ zoomBtns.forEach(function(btn, index) {
     sliderDisplaySize = $('.images-modal .slider-display').offsetWidth;
     sliderContainer.style.transition = null;
     showImageSlide(index + 1);
+    document.body.classList.add('noscroll');
+    setTimeout(function() {
+      imagesModal.style.opacity = '1';
+    }, 1);
   });
 });
 
+const closeImagesModalFn = function() {
+  imagesModal.style.opacity = '0';
+  setTimeout(function() {
+    $('.specifications-modal .overlay').scrollTop = 0;
+    imagesModal.style.display = 'none';
+    document.body.classList.remove('noscroll');
+  }, 301);
+}
+
 let closeImagesModalBtn = $('.images-modal .modal-close-icon');
 closeImagesModalBtn.addEventListener('click', function() {
-  imagesModal.style.display = 'none';
+  closeImagesModalFn();
 });
 
 let overlayImagesModal = $('.images-modal .overlay');
 overlayImagesModal.addEventListener('click', function() {
-  imagesModal.style.display = 'none';
+  closeImagesModalFn();
 });
 
 let imagesModalContainer = $('.images-modal .modal-container');

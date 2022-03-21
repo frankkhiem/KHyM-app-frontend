@@ -914,6 +914,7 @@
 
 .images-modal {
   display: none;
+  opacity: 0;
 }
 .images-modal .modal-container {
   display: flex;
@@ -944,6 +945,7 @@
 .images-modal .slider {
   width: 100%;
   height: 88%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1025,6 +1027,99 @@
 .images-modal .thumnails .thumnail-item img {
   width: auto;
   height: 100%;
+}
+
+@media (max-width: 739px) {
+  .intro-section {
+    padding-top: 1rem;
+  }
+  .intro-section .page-path.above {
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+  }
+  .intro-section .page-path.below {
+    display: none;
+  }
+  .intro-section .main-image__container img {
+    object-fit: contain;
+  }
+  .intro-section .sub-images {
+    margin-top: 1rem;
+  }
+  .intro-section .product-name {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .intro-section .product-price {
+    margin-top: 1.5rem;
+  }
+  .intro-section .product-action {
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+  .intro-section .product-action .add-to-cart {
+    order: 3;
+    margin: 10px 0 0 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .intro-section .social-sharing {
+    justify-content: space-evenly;
+    margin-top: 2rem;
+  }
+  .intro-section .social-sharing .social-btn {
+    margin-right: 0;
+  }
+
+  .information-section {
+    margin-top: 3rem;
+  }
+  .information-section .describe {
+    margin-bottom: 2rem;
+  }
+  .information-section .describe .review-rating {
+    margin-bottom: 2rem;
+  }
+  .information-section .describe .your-comment:after {
+    bottom: -0.5rem;
+  }
+  .information-section .describe .customer-reviews {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .information-section .specifications .more-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .recommend-section {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  .recommend-section .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .specifications-modal .modal-container {
+    padding-bottom: 5rem;
+  }
+  .specifications-modal .modal-container .config-block .item .config-name {
+    width: 40%;
+    padding-right: 1rem;
+  }
+  .specifications-modal .modal-close-btn {
+    bottom: 1.5rem;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .intro-section .page-path.above {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .intro-section .page-path.above {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

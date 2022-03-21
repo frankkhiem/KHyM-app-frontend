@@ -1110,6 +1110,7 @@ $mainGreenColor: #46b04a;
 
 .images-modal {
 	display: none;
+	opacity: 0;
 
 	.modal-container {
 		display: flex;
@@ -1144,7 +1145,7 @@ $mainGreenColor: #46b04a;
 	.slider {
 		width: 100%;
 		height: 88%;
-		// background-color: red;
+		overflow: hidden;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -1243,3 +1244,5 @@ $mainGreenColor: #46b04a;
 		}
 	}
 }
+
+@import 'responsive';
