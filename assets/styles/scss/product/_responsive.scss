@@ -5,7 +5,7 @@
 
 		.page-path.above {
 			padding-left: .5rem;
-			margin-bottom: 0;
+			margin-bottom: 2rem;
 		}
 
 		.page-path.below {
@@ -13,17 +13,19 @@
 		}
 
 		.intro-images {
+			.slider-container {
+				margin: 0 auto;
+			}
+		}
 
+		.sub-images {
+			margin: 2rem auto 0;
 		}
 
 		.main-image__container {
 			img {
 				object-fit: contain;
 			}
-		}
-
-		.sub-images {
-			margin-top: 1rem;
 		}
 
 		.product-name {
@@ -147,6 +149,18 @@
 	}
 }
 
+// responsive cho Mobile nhỏ
+@media (max-width: 420px) {
+	.intro-section {
+		.page-path.above {
+			margin-bottom: 0;
+		}
+
+		.sub-images {
+			margin-top: 1rem;
+		}
+	}
+}
 
 // reponsive cho Tablet
 @media (min-width: 740px) and (max-width: 1023px) {

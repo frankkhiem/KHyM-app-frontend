@@ -304,14 +304,28 @@ let sliderContainer = $('.images-modal .slider-container');
 
 let thumnailImages = $$('.images-modal .thumnail-item');
 
+let thumnailsContainer = $('.images-modal .thumnails');
+
+const thumnailImagesScrollHandle = function(next) {
+  let currentThumnailActived = $('.images-modal .thumnail-item.active');
+
+  if( next ) {
+    if( currentThumnailActived.offsetLeft + currentThumnailActived.offsetWidth > sliderDisplaySize ) {
+      thumnailsContainer.scrollLeft = 32 + currentThumnailActived.offsetLeft + currentThumnailActived.offsetWidth - sliderDisplaySize;
+    }
+  }
+}
+
 prevSliderBtn.addEventListener('click', function() {
   showImageSlide(--currentIndex2);
   sliderContainer.style.transition = 'transform .3s ease-out';
+  thumnailImagesScrollHandle(false);
 });
 
 nextSliderBtn.addEventListener('click', function() {
   showImageSlide(++currentIndex2);
   sliderContainer.style.transition = 'transform .3s ease-out';
+  thumnailImagesScrollHandle(true);
 });
 
 let numbersImage = sliderContainer.childElementCount;
@@ -352,6 +366,12 @@ const thumnailModalActive = function(index) {
     currentThumnailActived.classList.remove('active');
   }
   thumnailImages[index].classList.add('active');
+  if( index === 0 ) {
+    thumnailsContainer.scrollLeft = 0;
+  }
+  else if( index + 1 === numbersImage ) {
+    thumnailsContainer.scrollLeft = sliderDisplaySize + currentThumnailActived.offsetWidth;
+  }
 }
 
 thumnailImages.forEach(function(thumn, index) {
