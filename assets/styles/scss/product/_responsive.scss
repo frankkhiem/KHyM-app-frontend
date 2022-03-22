@@ -119,6 +119,8 @@
 
 		.thumnails {
 			height: 14%;
+			width: auto;
+    	margin: 0 4px;
 		}
 
 		.slider-btn {
@@ -165,8 +167,75 @@
 // reponsive cho Tablet
 @media (min-width: 740px) and (max-width: 1023px) {
 	.intro-section {
+		padding-top: 1.5rem;
+
 		.page-path.above {
+			margin-bottom: 2.5rem;
+		}
+
+		.page-path.below {
 			display: none;
+		}
+
+		.intro-images {
+			.slider-container {
+				margin: 0 auto;
+			}
+
+			.sub-images {
+				margin: 2rem auto 0;
+			}
+		}
+
+		.product-name {
+			margin: 2.5rem 0 0;
+		}
+
+		.product-action {
+			margin-top: 2rem;
+		}
+
+		.social-sharing {
+			.social-btn {
+				margin-right: 1.5rem;
+			}
+		}
+	}
+
+	.information-section {
+		margin-top: 3rem;
+
+		.describe {
+			margin-bottom: 2rem;
+
+			.customer-reviews .more-btn {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.specifications .more-btn {
+			width: 60%;
+			margin-top: 1.2rem;
+		}
+	}
+
+	.recommend-section {
+		margin-top: 3rem;
+
+		.section-title {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.images-modal {
+		.slider {
+			height: 85%;
+		}
+
+		.thumnails {
+			width: auto;
+			margin: 0 .5rem;
+			padding-bottom: 0;
 		}
 	}
 }
