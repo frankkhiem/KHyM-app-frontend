@@ -283,3 +283,13 @@ const swiper = new Swiper('.feedback-slider', {
 /**
  * End code cho Swiper Slider
  */
+
+// Go to products list page
+$$('.categories .category-item').forEach((element) => {
+	element.addEventListener('click', function() {
+		location.href = './pages/not_found';
+	});
+});
+
+
+//  Go to 404 not found
