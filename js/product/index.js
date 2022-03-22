@@ -501,3 +501,15 @@ let imagesModalContainer = $('.images-modal .modal-container');
 imagesModalContainer.addEventListener('click', function(e) {
   e.stopPropagation();
 });
+
+
+// Go to Not found page
+// $('.product-action .favorite').addEventListener('click', function() {
+//   location.href = '../not_found';
+// });
+
+$$('.social-sharing .social-btn').forEach((element) => {
+  element.addEventListener('click', function() {
+    location.href = '../not_found';
+  });
+});

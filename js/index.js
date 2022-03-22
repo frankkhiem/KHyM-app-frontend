@@ -287,9 +287,79 @@ const swiper = new Swiper('.feedback-slider', {
 // Go to products list page
 $$('.categories .category-item').forEach((element) => {
 	element.addEventListener('click', function() {
-		location.href = './pages/not_found';
+		location.href = './pages/products_list';
+	});
+});
+
+// Go to product page
+$$('.product-item .product-thumb').forEach((element) => {
+	element.addEventListener('click', function() {
+		location.href = './pages/product';
+	});
+});
+
+$$('.product-item .product-name').forEach((element) => {
+	element.addEventListener('click', function() {
+		location.href = './pages/product';
+	});
+});
+
+$$('.product-item .product-action span').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		e.stopPropagation();
+	});
+});
+
+$$('.product-item .product-action span:nth-child(2)').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/product';
 	});
 });
 
 
 //  Go to 404 not found
+$('.search .search-bar__btn').addEventListener('click', function() {
+	location.href = './pages/not_found';
+}); 
+ 
+$$('.modal-login .login-btn').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/not_found';
+	});
+});
+
+$$('.modal-login .social-login').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/not_found';
+	});
+});
+
+$('.notifications .view-more').addEventListener('click', function(e) {
+	location.href = './pages/not_found';
+});
+
+$('.cart .cart__detail-view').addEventListener('click', function(e) {
+	location.href = './pages/not_found';
+});
+
+$('.mail .mail-btn').addEventListener('click', function(e) {
+	location.href = './pages/not_found';
+});
+
+$$('.about-section .action-btn').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/not_found';
+	});
+});
+
+$$('.about-section .learn-more-btn').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/not_found';
+	});
+});
+
+$$('.middle-footer .list-items .item').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		location.href = './pages/not_found';
+	});
+});
