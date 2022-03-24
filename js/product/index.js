@@ -513,3 +513,59 @@ $$('.social-sharing .social-btn').forEach((element) => {
     location.href = '../not_found';
   });
 });
+
+// show Toast message
+$('.product-action .add-to-cart').addEventListener('click', function() {
+  showToast({
+    type:'info', 
+    title: 'Thông báo',
+    message: 'Bạn đã thêm sản phẩm mới vào giỏ hàng',
+    duration: 5000
+  });
+});
+
+$('.product-action .favorite').addEventListener('click', function() {
+  showToast({
+    type:'success', 
+    title: 'Thành công',
+    message: 'Đã thêm sản phẩm vào danh sách yêu thích',
+    duration: 5000
+  });
+});
+
+$$('.recommend-section .item-actions .item-action:first-child').forEach((element) => {
+  element.addEventListener('click', function(e) {
+    e.preventDefault();
+    showToast({
+      type:'success', 
+      title: 'Thành công',
+      message: 'Bạn đã thêm sản phẩm mới vào giỏ hàng',
+      duration: 5000
+    });
+  });
+});
+
+
+$$('.recommend-section .item-actions .item-action:nth-child(3)').forEach((element) => {
+  element.addEventListener('click', function(e) {
+    e.preventDefault();
+    showToast({
+      type:'error', 
+      title: 'Thất bại',
+      message: 'Hệ thống lỗi, vui lòng đợi trong giây lát!',
+      duration: 5000
+    });
+  });
+});
+
+$$('.recommend-section .item-actions .item-action:last-child').forEach((element) => {
+  element.addEventListener('click', function(e) {
+    e.preventDefault();
+    showToast({
+      type:'warning', 
+      title: 'Cảnh báo',
+      message: 'Hệ thống không thể tìm ra sản phẩm tương tự',
+      duration: 5000
+    });
+  });
+});

@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#toasts {
+	position: fixed;
+	top: 100px;
+	right: 32px;
+	z-index: 2;
+}
+
+.toast__container {
+	width: 400px;
+	height: 85px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 8px 10px 8px 16px;
+	background-color: #fff;
+	box-shadow: 1px 3px 10px 3px rgb(0 0 0 / 10%);
+	border-radius: 12px;
+	border: none;
+	border-left: 6px solid;
+	overflow: hidden;
+	transform: translateX(calc(100% + 40px));
+	transition: all .3s ease-out;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	+ .toast__container {
+		margin-top: 24px;
+	}
+
+	.toast__icon {
+		margin-right: 18px;
+		font-size: 20px;
+	}
+
+	.toast__content {
+		flex-grow: 1;
+		min-width: 60%;
+		margin-bottom: 4px;
+
+		.toast__title {
+			font-size: 16px;
+			font-weight: 600;
+			width: fit-content;
+			color: #2c2c2c;
+			cursor: pointer;
+		}
+
+		.toast__message {
+			font-size: 14px;
+			color: #707070;
+			line-height: 1.5;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.toast__close-btn {
+		margin-left: 1rem;
+		padding: 5px;
+		font-size: 1rem;
+		opacity: 0.8;
+		color: #2c2c2c;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.toast__progress {
+		position: absolute;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #000;
+		animation: progress linear forwards;
+		animation-duration: 5s;
+	}
+
+	@keyframes progress {
+		from {
+			width: 100%;
+		}
+
+		to {
+			width: 0%;
+		}
+	}
+}
+
+.toast__container.success {
+	border-color: #28a745; 
+
+	.toast__icon {
+		color: #28a745;
+	}
+
+	.toast__progress {
+		background-color: #28a745; 
+	}
+}
+
+.toast__container.info {
+	border-color: #17a2b8; 
+
+	.toast__icon {
+		color: #17a2b8;
+	}
+
+	.toast__progress {
+		background-color: #17a2b8; 
+	}
+}
+
+.toast__container.warning {
+	border-color: #ffc107; 
+
+	.toast__icon {
+		color: #ffc107;
+	}
+
+	.toast__progress {
+		background-color: #ffc107; 
+	}
+}
+
+.toast__container.error {
+	border-color: #dc3545; 
+
+	.toast__icon {
+		color: #dc3545;
+	}
+
+	.toast__progress {
+		background-color: #dc3545; 
+	}
+}

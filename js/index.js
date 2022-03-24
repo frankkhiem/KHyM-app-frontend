@@ -1,5 +1,5 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 
 // Định nghĩa hàm detect click outside 1 element và thực hiện 1 hàm
 const detectClickOutsideElement = function(element, handle) {
@@ -361,5 +361,28 @@ $$('.about-section .learn-more-btn').forEach((element) => {
 $$('.middle-footer .list-items .item').forEach((element) => {
 	element.addEventListener('click', function(e) {
 		location.href = './pages/not_found';
+	});
+});
+
+// show Toast message
+$$('.product-item .product-action span:nth-child(1)').forEach((element) => {
+	element.addEventListener('click', function() {
+		showToast({
+			type:'info', 
+			title: 'Thông báo',
+			message: 'Bạn đã thêm sản phẩm mới vào giỏ hàng',
+			duration: 5000
+		});
+	});
+});
+
+$$('.product-item .product-action span:nth-child(3)').forEach((element) => {
+	element.addEventListener('click', function() {
+		showToast({
+			type:'success', 
+			title: 'Thành công',
+			message: 'Đã thêm sản phẩm vào danh sách yêu thích',
+    	duration: 5000
+		});
 	});
 });

@@ -7,12 +7,14 @@
 	<link rel="icon" href="assets/logos/IconPage.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/styles/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/toast/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<script src="https://kit.fontawesome.com/51dd093cce.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header class="header">
@@ -1473,10 +1475,13 @@
 	</div>
 
 	<!-- Tạo màn hình khi load trang -->
-	<div id="loading-container" class="loaded">
+	<div id="loading-container">
 		<img class="loading-image" src="assets/logos/loading1.gif" alt="Loading page">
 	</div>
 
+	<!-- Tạo toast message -->
+	<div id="toasts">
+	</div>
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -1484,6 +1489,9 @@
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 	<script src="js/index.js">
+	</script>
+
+	<script src="js/toast/index.js">
 	</script>
 </body>
 </html>

@@ -64,3 +64,29 @@ var handleScrollDownFunction = function() {
     scrollToTopBtn.classList.remove('show');
   }
 };
+
+
+// show Toast message
+$$('.products-section .item-actions .item-action:first-child').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		e.preventDefault();
+		showToast({
+			type:'info', 
+			title: 'Thông báo',
+			message: 'Bạn đã thêm sản phẩm mới vào giỏ hàng',
+			duration: 5000
+		});
+	});
+});
+
+$$('.products-section .item-actions .item-action:nth-child(3)').forEach((element) => {
+	element.addEventListener('click', function(e) {
+		e.preventDefault();
+		showToast({
+			type:'success', 
+			title: 'Thành công',
+			message: 'Đã thêm sản phẩm vào danh sách yêu thích',
+			duration: 5000
+		});
+	});
+});
